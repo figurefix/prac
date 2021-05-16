@@ -1,0 +1,9 @@
+
+# goto nginx installation directory and start nginx
+cd C:/FF/DEV/nginx
+nginx.exe
+
+# goto nginx installation directory and stop nginx
+cd C:/FF/DEV/nginx
+nginx.exe -s stop
+

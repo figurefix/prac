@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="3.0">
+  <display-name>prac test</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <error-page>
+    <error-code>500</error-code>
+    <location>/error.jsp</location>
+  </error-page>
+  <servlet>
+    <description>anyway</description>
+    <servlet-name>TestServlet</servlet-name>
+    <servlet-class>figurefix.prac.test.jobs.TestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TestServlet</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  <listener>
+    <listener-class>figurefix.prac.test.jobs.TestListener</listener-class>
+  </listener>
+</web-app>

@@ -1,0 +1,149 @@
+/*
+ * Copyright (C) 2015-2020 figurefix <figurefix@outlook.com>
+ * 
+ * This file is part of prac, 
+ * prac is free software released under the MIT license.
+ * 
+ */
+
+@CHARSET "UTF-8";
+
+.global_black {
+	background-color:#000;	
+}
+.global_white {
+	background-color:#FFF;	
+}
+.global_red {
+	background-color:#F00;
+	color:#FFF;
+}
+.global_blue {
+	background-color:#069;
+	color:#FFF;
+}
+.global_green {
+	background-color:#8B2;
+	color:#FFF;
+}
+.global_purple {
+	background-color:#93C;
+	color:#FFF;
+}
+.global_orange {
+	background-color:#F60;
+	color:#FFF;
+}
+
+.color_reverse {
+	background-color:#069;
+	color:#FFF;
+}
+.error {
+	background-color:#F00;
+	color:#FFF;
+}
+body {
+	background-color:#EEF;
+	font-family:微软雅黑, Arial, Helvetica, sans-serif;
+	font-size:18px;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family:微软雅黑, Arial, Helvetica, sans-serif;
+	font-weight:normal;
+}
+a, .linkstyle {
+	color:#00C;
+	text-decoration:none;
+	padding-left:1px;
+	padding-right:1px;
+}
+a:hover, .linkstyle:hover {
+	background-color:#FF9;
+}
+button:hover, input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover {
+	margin:1px;
+	font-family:inherit;
+	font-size:inherit;
+	border: #069 solid thin;
+	padding: 1px 5px 2px 5px;
+	background-color:#F60;
+	color:#FFF;
+}
+button, input[type=submit], input[type=reset], input[type=button] {
+	margin:1px;
+	font-family:inherit;
+	font-size:inherit;
+	border: #036 solid thin;
+	padding: 1px 5px 2px 5px;
+	background-color:#069;
+	color:#FFF;
+	border-radius: 0.2em;
+}
+button:disabled, input[type=submit]:disabled, input[type=reset]:disabled, input[type=button]:disabled {
+	margin: 1px;
+	font-family: inherit;
+	font-size: inherit;
+	border: #039 solid thin;
+	padding: 1px 5px 2px 5px;
+	background-color: #BBB;
+	color: #000;
+}
+input[type=text], input[type=password], textarea {
+	font-family:inherit;
+	font-size:inherit;
+	background-color:#FFF;
+	border:thin solid #000;
+}
+select {
+	font-family:inherit;
+	font-size:inherit;
+	background-color:#EEF;
+	border:thin solid #000;
+}
+input[type=text]:focus, input[type=password]:focus, textarea:focus, select:focus {
+	background-color: #FF9;
+}
+input:disabled, input:disabled:focus, 
+input[readonly], input[readonly]:focus, 
+textarea:disabled, textarea:disabled:focus, 
+textarea[readonly], textarea[readonly]:focus,
+select:disabled, select:disabled:focus {
+	background-color:#EEF;
+	color:#000;
+}
+table.formgrid {
+	
+}
+table.formgrid > tbody > tr > th {
+	background-color:#084;
+	color: #EEE;
+	white-space: nowrap;
+	padding: 4px 6px 6px 6px;
+	font-weight: normal;
+}
+table.formgrid > tbody > tr > td {
+	white-space: nowrap;
+	padding: 6px 8px 6px 8px;
+}
+table.datagrid {
+	border-style: solid;
+	border-color: #000;
+	border-width: 1px 1px 1px 1px;
+}
+table.datagrid > tbody > tr > th {
+	border-style: solid;
+	border-color: #000;
+	border-width: 1px 1px 1px 1px;
+	background-color: #084;
+	color: #EEE;
+	white-space: nowrap;
+	padding: 4px 8px 6px 8px;
+}
+table.datagrid > tbody > tr > td {
+	border-style: solid;
+	border-color: #000;
+	border-width: 1px 1px 1px 1px;
+	padding: 3px 5px 3px 5px;
+	white-space: nowrap;
+}

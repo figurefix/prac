@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>nut comprehensive preview</title>
+<link href="css/prac.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/label.js"></script>
+<script type="text/javascript" src="js/datagrid.js"></script>
+<script type="text/javascript" src="js/formgrid.js"></script>
+<script type="text/javascript" src="js/branch.js"></script>
+<style type="text/css">
+input[type=text], input[type=password], select, textarea {
+	width: 200px;
+}
+</style>
+</head>
+<body style="padding:5px 5px 50px 5px;">
+
+<p>
+<input type="submit" value="提交 Submit"/>
+<input type="submit" disabled value="提交 Disabled"/>
+<input type="reset" value="重置 Reset"/>
+<input type="button" value="按钮 Button"/>
+<button>按钮 Button</button>
+<button disabled>按钮 Disabled</button>
+</p>
+
+<div id="labelh" title="标题展示 Title Style">
+	<h1>一级标题 Head 1</h1>
+	<h2>二级标题 Head 2</h2>
+	<h3>三级标题 Head 3</h3>
+	<h4>四级标题 Head 4</h4>
+	<h5>五级标题 Head 5</h5>
+	<h6>六级标题 Head 6</h6>
+</div>
+
+<div id="labeltext" title="文本展示 Text Style">
+	<p>
+		普通文本 Normal Text，
+		<span class="color_reverse">反色文本 Color Reversed Text</span>，
+		<span class="error">错误提示 Error Message</span>，
+		<a href="#">链接 Link</a>
+	</p>
+</div>
+
+<div id="labelform" title="表单 FORM">
+
+<table class="formgrid">
+<tr>
+	<td>
+		<input type="checkbox" id="pvcb"/> <label for="pvcb">复选款</label>
+	</td>
+	<td>
+		<input type="radio" name="choseone" id="pvr1"/> <label for="pvr1">单选框1</label> 
+		<input type="radio" name="choseone" id="pvr2"/> <label for="pvr2">单选框2</label>	
+	</td>
+	<th>
+		下拉列表
+	</th>
+	<td>
+		<select>
+			<optgroup label="选项组 Option Group 1">
+				<option value="opva">选项 Option 1</option>
+				<option value="opva">选项 Option 2</option>
+			</optgroup>
+			<optgroup label="选项组 Option Group 2">
+				<option value="opva">选项 Option 3</option>
+				<option value="opva">选项 Option 4</option>
+			</optgroup>
+		</select>
+	</td>
+	<th>
+		下拉列表 DISABLED
+	</th>
+	<td>
+		<select disabled>
+			<optgroup label="选项组 Option Group 1">
+				<option value="opva">选项 Option 1</option>
+				<option value="opva">选项 Option 2</option>
+			</optgroup>
+			<optgroup label="选项组 Option Group 2">
+				<option value="opva">选项 Option 3</option>
+				<option value="opva">选项 Option 4</option>
+			</optgroup>
+		</select>
+	</td>
+</tr>
+<tr>
+	<th>
+		输入
+	</th>
+	<td>
+		<input type="text" value="输入内容 Input Text" />
+	</td>
+	<th>
+		输入 READONLY
+	</th>
+	<td>
+		<input type="text" value="输入内容" readonly />
+	</td>
+	<th>
+		输入 DISABLED
+	</th>
+	<td>
+		<input type="text" value="输入内容" disabled />
+	</td>
+</tr>
+<tr>
+	<th>
+		密码
+	</th>
+	<td>
+		<input type="password" value="123456" />
+	</td>
+	<th>
+		密码 READONLY
+	</th>
+	<td>
+		<input type="password" value="123456" readonly />
+	</td>
+	<th>
+		密码 DISABLED
+	</th>
+	<td>
+		<input type="password" value="123456" disabled />
+	</td>
+</tr>
+<tr>
+	<th>
+		文本框
+	</th>
+	<td>
+		<textarea>文本框输入</textarea>
+	</td>
+	<th>
+		文本框 READONLY
+	</th>
+	<td>
+		<textarea readonly>文本框输入</textarea>
+	</td>
+	<th>
+		文本框 DISABLED
+	</th>
+	<td>
+		<textarea disabled>文本框输入</textarea>
+	</td>
+</tr>
+</table>
+
+</div>
+
+<div id="labeldatagrid" title="数据表格">
+	<table class="datagrid">
+		<tr><th>标题一</th><th>标题二</th><th>标题三</th></tr>
+		<tr><td>数据11</td><td>数据12</td><td>数据13</td></tr>
+		<tr><td>数据21</td><td>数据22</td><td>数据23</td></tr>
+	</table>
+</div>
+
+<div id="labeljsdatagrid" title="JS数据表格">
+	<div id="jsdatagrid"></div>
+</div>
+
+<div id="labelformgrid" title="表单表格">
+	<div id="formgrid"></div>
+</div>
+
+<div id="labelbranch" title="树">
+	<div id="branch" style="display:block; background-color:inherit;"></div><br>
+</div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+
+// create labels -----------------------------------------------
+var label = new nut.Label(0);
+label.setup("labelh");
+label.setup("labeltext");
+label.setup("labelform");
+label.setup("labeldatagrid");
+label.setup("labeljsdatagrid");
+label.setup("labelformgrid");
+label.setup("labelbranch");
+
+// create js data grid --------------------------------------------
+var tb = new nut.DataGrid("jsdatagrid","列1","列2","列3");
+tb.append("aa", "E", 1);
+tb.append("bb", "D", 3);
+tb.append("cc", "C", 5);
+tb.append("dd", "B", 4);
+tb.append("ee", "A", 2);
+
+// create formgrid -----------------------------------------------------
+function testhref(r) {
+	alert("this is href from row "+r);
+}
+
+var grid = new nut.FormGrid("myformgrid");
+grid.addColumn("text", "mytext", "文本", "center");
+grid.addColumn("input", "myinput", "输入", 5, "width:100px;");
+grid.addColumn("hidden", "myhid");
+grid.addColumn("select", "myselect", "选择", " = ,mya=aaa选项,myb=bbb选项,myc=ccc选项");
+grid.addColumn("select", "myselectgrp", "分组选择", " = ;组1:mya=aaa选项,myb=bbb选项; 组2:myc=ccc选项,myd=ddd选项");
+grid.addColumn("href", "myhref", "链接", testhref);
+
+grid.add();
+grid.add("haha键值1", "abc输入1", "myhidedvalue", "mya", "myc", "click me 点我1");
+grid.add("haha键值2", "abc输入2", "myhidedvalue", "myb", "myc", "click me 点我2");
+
+grid.appendTo("formgrid");
+
+// create branch ------------------------------------------------------
+var b1 = new nut.Branch("branch");
+b1.spreadto("树形分支A")
+	.spreadto("树形分支B")
+		.spread("树形分支C")
+		.spread("树形分支D")
+			.first()
+			.spread("树形分支E")
+		.parent()
+	.parent()
+	.spread("树形分支E")
+.parent()
+.spreadto("树形分支F")
+	.spread("树形分支G")
+	.spreadto("树形分支H").root().spread("树形分支I");
+b1.expandAll();
+</script>
+
